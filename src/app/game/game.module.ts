@@ -5,6 +5,7 @@ import { GamesComponent } from './containers/games/games.component';
 import { GameDetailsComponent } from './containers/game-details/game-details.component';
 import { BasicGameInfosComponent } from './components/basic-game-infos/basic-game-infos.component';
 import { GameListItemComponent } from './components/game-list-item/game-list-item.component';
+import { AngularMaterialModule } from '../angular-material/angular-material.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { GameListItemComponent } from './components/game-list-item/game-list-ite
   ],
   imports: [
     CommonModule,
-    GameRoutingModule
+    GameRoutingModule,
+    AngularMaterialModule
   ]
 })
 export class GameModule { }

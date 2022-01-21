@@ -1,4 +1,4 @@
-<ul *ngIf="gameList.length > 0">
+<mat-list *ngIf="gameList.length > 0">
     <val-game-list-item *ngFor = "let game of gameList" [game] = game></val-game-list-item>
-</ul>
+</mat-list>
 <p *ngIf="gameList.length == 0">La liste est vide</p>
