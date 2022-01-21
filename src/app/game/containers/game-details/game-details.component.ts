@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Game } from '../../models/Game';
 
 @Component({
   selector: 'val-game-details',
@@ -7,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class GameDetailsComponent {
 
-  game={id:1, name:"mario",console:"nes"};
+  game:Game={id:1, name:"mario",console:"nes"};
 
 }

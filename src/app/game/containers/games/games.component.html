@@ -1,4 +1,11 @@
-<mat-list *ngIf="gameList.length > 0">
-    <val-game-list-item *ngFor = "let game of gameList" [game] = game></val-game-list-item>
-</mat-list>
+<div *ngIf="gameList.length > 0">
+  <mat-grid-list cols="4" rowHeight="1:1" gutterSize=10px>
+    <mat-grid-tile *ngFor="let game of gameList">
+      <val-game-list-item        
+        [game]="game"
+        (onGameClicked)="showDetails($event)"
+      ></val-game-list-item>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
 <p *ngIf="gameList.length == 0">La liste est vide</p>

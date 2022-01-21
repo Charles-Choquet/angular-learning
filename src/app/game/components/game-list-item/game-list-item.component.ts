@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Game } from '../../models/Game';
 
 @Component({
   selector: 'val-game-list-item',
@@ -7,12 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 export class GameListItemComponent {
 
-  @Input() game: any;
+  @Input() game!: Game;
+  @Output() onGameClicked: EventEmitter<Game> = new EventEmitter();  
   
-  constructor() { }
+  constructor() {}
 
-  getDetail() {
-    console.log('you clicked on the user');
+  selectGame() : void {
+    this.onGameClicked.emit(this.game)    
   }
 
 }

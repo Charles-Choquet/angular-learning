@@ -1,4 +1,8 @@
-<mat-list-item>
-    <p>Nom du jeu: {{game.name}}, console : {{game.console}}</p>
-    <button mat-raised-button color="primary" (click)="getDetail()">Detail</button>
-</mat-list-item>
+<mat-card>
+  <mat-card-title
+    >Nom du jeu: {{ game.name }}, console : {{ game.console }}</mat-card-title
+  >
+  <button mat-raised-button color="primary" (click)="selectGame()">
+    Detail
+  </button>
+</mat-card>

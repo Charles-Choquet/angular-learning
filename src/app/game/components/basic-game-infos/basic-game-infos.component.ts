@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Game } from '../../models/Game';
 
 @Component({
   selector: 'val-basic-game-infos',
@@ -7,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class BasicGameInfosComponent {
   
-  @Input() game: any;
+  @Input() game!: Game;
 
 }

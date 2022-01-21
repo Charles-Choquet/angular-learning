@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Game } from '../../models/Game';
 
 @Component({
   selector: 'val-games',
@@ -13,6 +14,10 @@ export class GamesComponent implements OnInit {
     {id:3, name:"final fanatasy IX", console:"playstation 1"},
     {id:4, name:"Persona 5", console:"playstation 4"}
   ];
+
+  showDetails(game: Game) : void {
+    console.log(game);
+  }
 
   constructor() { }
 
